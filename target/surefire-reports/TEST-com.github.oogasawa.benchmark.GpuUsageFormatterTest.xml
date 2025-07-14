@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.github.oogasawa.benchmark.GpuUsageFormatterTest" time="0.225" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="23"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/oogasawa/works/benchmark-parabricks/target/test-classes:/home/oogasawa/works/benchmark-parabricks/target/classes:/home/oogasawa/.m2/repository/com/github/oogasawa/Utility-cli/3.2.0/Utility-cli-3.2.0.jar:/home/oogasawa/.m2/repository/tech/tablesaw/tablesaw-core/0.44.4/tablesaw-core-0.44.4.jar:/home/oogasawa/.m2/repository/com/google/guava/guava/33.0.0-jre/guava-33.0.0-jre.jar:/home/oogasawa/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/home/oogasawa/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/oogasawa/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/oogasawa/.m2/repository/org/checkerframework/checker-qual/3.41.0/checker-qual-3.41.0.jar:/home/oogasawa/.m2/repository/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0.jar:/home/oogasawa/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/home/oogasawa/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/home/oogasawa/.m2/repository/it/unimi/dsi/fastutil/8.5.13/fastutil-8.5.13.jar:/home/oogasawa/.m2/repository/org/roaringbitmap/RoaringBitmap/1.0.5/RoaringBitmap-1.0.5.jar:/home/oogasawa/.m2/repository/com/univocity/univocity-parsers/2.9.1/univocity-parsers-2.9.1.jar:/home/oogasawa/.m2/repository/com/ibm/icu/icu4j/74.2/icu4j-74.2.jar:/home/oogasawa/.m2/repository/io/github/classgraph/classgraph/4.8.168/classgraph-4.8.168.jar:/home/oogasawa/.m2/repository/org/knowm/xchart/xchart/3.8.8/xchart-3.8.8.jar:/home/oogasawa/.m2/repository/de/erichseifert/vectorgraphics2d/VectorGraphics2D/0.13/VectorGraphics2D-0.13.jar:/home/oogasawa/.m2/repository/de/rototor/pdfbox/graphics2d/3.0.1/graphics2d-3.0.1.jar:/home/oogasawa/.m2/repository/org/apache/pdfbox/pdfbox/3.0.1/pdfbox-3.0.1.jar:/home/oogasawa/.m2/repository/org/apache/pdfbox/pdfbox-io/3.0.1/pdfbox-io-3.0.1.jar:/home/oogasawa/.m2/repository/org/apache/pdfbox/fontbox/3.0.1/fontbox-3.0.1.jar:/home/oogasawa/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/oogasawa/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/home/oogasawa/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/home/oogasawa/.m2/repository/com/madgag/animated-gif-lib/1.4/animated-gif-lib-1.4.jar:/home/oogasawa/.m2/repository/org/yaml/snakeyaml/1.28/snakeyaml-1.28.jar:/home/oogasawa/.m2/repository/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar:/home/oogasawa/.m2/repository/ch/qos/logback/logback-classic/1.2.6/logback-classic-1.2.6.jar:/home/oogasawa/.m2/repository/ch/qos/logback/logback-core/1.2.6/logback-core-1.2.6.jar:/home/oogasawa/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/home/oogasawa/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/oogasawa/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/home/oogasawa/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/oogasawa/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/home/oogasawa/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:"/>
+    <property name="java.vm.vendor" value="GraalVM Community"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://www.graalvm.org/"/>
+    <property name="user.timezone" value="Asia/Tokyo"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="JP"/>
+    <property name="sun.boot.library.path" value="/home/oogasawa/.sdkman/candidates/java/23.0.2-graalce/lib"/>
+    <property name="sun.java.command" value="/home/oogasawa/works/benchmark-parabricks/target/surefire/surefirebooter-20250713182722363_3.jar /home/oogasawa/works/benchmark-parabricks/target/surefire 2025-07-13T18-27-22_209-jvmRun1 surefire-20250713182722363_1tmp surefire_0-20250713182722363_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/oogasawa/works/benchmark-parabricks/target/test-classes:/home/oogasawa/works/benchmark-parabricks/target/classes:/home/oogasawa/.m2/repository/com/github/oogasawa/Utility-cli/3.2.0/Utility-cli-3.2.0.jar:/home/oogasawa/.m2/repository/tech/tablesaw/tablesaw-core/0.44.4/tablesaw-core-0.44.4.jar:/home/oogasawa/.m2/repository/com/google/guava/guava/33.0.0-jre/guava-33.0.0-jre.jar:/home/oogasawa/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/home/oogasawa/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/oogasawa/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/oogasawa/.m2/repository/org/checkerframework/checker-qual/3.41.0/checker-qual-3.41.0.jar:/home/oogasawa/.m2/repository/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0.jar:/home/oogasawa/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/home/oogasawa/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/home/oogasawa/.m2/repository/it/unimi/dsi/fastutil/8.5.13/fastutil-8.5.13.jar:/home/oogasawa/.m2/repository/org/roaringbitmap/RoaringBitmap/1.0.5/RoaringBitmap-1.0.5.jar:/home/oogasawa/.m2/repository/com/univocity/univocity-parsers/2.9.1/univocity-parsers-2.9.1.jar:/home/oogasawa/.m2/repository/com/ibm/icu/icu4j/74.2/icu4j-74.2.jar:/home/oogasawa/.m2/repository/io/github/classgraph/classgraph/4.8.168/classgraph-4.8.168.jar:/home/oogasawa/.m2/repository/org/knowm/xchart/xchart/3.8.8/xchart-3.8.8.jar:/home/oogasawa/.m2/repository/de/erichseifert/vectorgraphics2d/VectorGraphics2D/0.13/VectorGraphics2D-0.13.jar:/home/oogasawa/.m2/repository/de/rototor/pdfbox/graphics2d/3.0.1/graphics2d-3.0.1.jar:/home/oogasawa/.m2/repository/org/apache/pdfbox/pdfbox/3.0.1/pdfbox-3.0.1.jar:/home/oogasawa/.m2/repository/org/apache/pdfbox/pdfbox-io/3.0.1/pdfbox-io-3.0.1.jar:/home/oogasawa/.m2/repository/org/apache/pdfbox/fontbox/3.0.1/fontbox-3.0.1.jar:/home/oogasawa/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/oogasawa/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/home/oogasawa/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/home/oogasawa/.m2/repository/com/madgag/animated-gif-lib/1.4/animated-gif-lib-1.4.jar:/home/oogasawa/.m2/repository/org/yaml/snakeyaml/1.28/snakeyaml-1.28.jar:/home/oogasawa/.m2/repository/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar:/home/oogasawa/.m2/repository/ch/qos/logback/logback-classic/1.2.6/logback-classic-1.2.6.jar:/home/oogasawa/.m2/repository/ch/qos/logback/logback-core/1.2.6/logback-core-1.2.6.jar:/home/oogasawa/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/home/oogasawa/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/oogasawa/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/home/oogasawa/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/oogasawa/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/home/oogasawa/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/oogasawa"/>
+    <property name="user.language" value="ja"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-01-21"/>
+    <property name="java.home" value="/home/oogasawa/.sdkman/candidates/java/23.0.2-graalce"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/oogasawa/works/benchmark-parabricks"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="jdk.internal.vm.ci.enabled" value="true"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="logback.configurationFile" value="src/test/resources/logback-test.xml"/>
+    <property name="surefire.real.class.path" value="/home/oogasawa/works/benchmark-parabricks/target/surefire/surefirebooter-20250713182722363_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="23.0.2+7-jvmci-b01"/>
+    <property name="user.name" value="oogasawa"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.11.0-26-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="GraalVM CE 23.0.2+7.1"/>
+    <property name="localRepository" value="/home/oogasawa/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/oracle/graal/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="23.0.2"/>
+    <property name="user.dir" value="/home/oogasawa/works/benchmark-parabricks"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="GraalVM Community"/>
+    <property name="java.vm.version" value="23.0.2+7-jvmci-b01"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="67.0"/>
+  </properties>
+  <testcase name="testNormalizeColumnName" classname="com.github.oogasawa.benchmark.GpuUsageFormatterTest" time="0.208">
+    <system-out><![CDATA[18:27:22,864 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version ?
+18:27:22,865 |-INFO in ch.qos.logback.classic.util.ContextInitializer@6b6776cb - No custom configurators were discovered as a service.
+18:27:22,865 |-INFO in ch.qos.logback.classic.util.ContextInitializer@6b6776cb - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+18:27:22,865 |-INFO in ch.qos.logback.classic.util.ContextInitializer@6b6776cb - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+18:27:22,869 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+18:27:22,869 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+18:27:22,879 |-INFO in ch.qos.logback.classic.util.ContextInitializer@6b6776cb - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 5 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+18:27:22,879 |-INFO in ch.qos.logback.classic.util.ContextInitializer@6b6776cb - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+18:27:22,880 |-INFO in ch.qos.logback.classic.util.ContextInitializer@6b6776cb - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+18:27:22,881 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [src/test/resources/logback-test.xml]
+18:27:22,881 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+18:27:22,885 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/home/oogasawa/works/benchmark-parabricks/target/classes/logback.xml]
+18:27:22,885 |-WARN in ch.qos.logback.classic.util.DefaultJoranConfigurator@1863d2fe - Resource [logback.xml] occurs multiple times on the classpath.
+18:27:22,885 |-WARN in ch.qos.logback.classic.util.DefaultJoranConfigurator@1863d2fe - Resource [logback.xml] occurs at [file:/home/oogasawa/works/benchmark-parabricks/target/classes/logback.xml]
+18:27:22,885 |-WARN in ch.qos.logback.classic.util.DefaultJoranConfigurator@1863d2fe - Resource [logback.xml] occurs at [jar:file:/home/oogasawa/.m2/repository/com/github/oogasawa/Utility-cli/3.2.0/Utility-cli-3.2.0.jar!/logback.xml]
+18:27:22,965 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [STDERR]
+18:27:22,965 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+18:27:22,971 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+18:27:23,006 |-INFO in ch.qos.logback.core.ConsoleAppender[STDERR] - BEWARE: Writing to the console can be very slow. Avoid logging to the 
+18:27:23,006 |-INFO in ch.qos.logback.core.ConsoleAppender[STDERR] - console in production environments, especially in high volume systems.
+18:27:23,006 |-INFO in ch.qos.logback.core.ConsoleAppender[STDERR] - See also https://logback.qos.ch/codes.html#slowConsole
+18:27:23,006 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [ASYNC_STDERR]
+18:27:23,006 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.classic.AsyncAppender]
+18:27:23,011 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [STDERR] to ch.qos.logback.classic.AsyncAppender[ASYNC_STDERR]
+18:27:23,011 |-INFO in ch.qos.logback.classic.AsyncAppender[ASYNC_STDERR] - Attaching appender named [STDERR] to AsyncAppender.
+18:27:23,014 |-INFO in ch.qos.logback.classic.AsyncAppender[ASYNC_STDERR] - Setting discardingThreshold to 0
+18:27:23,014 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+18:27:23,014 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [ASYNC_STDERR] to Logger[ROOT]
+18:27:23,014 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@1787bc24 - End of configuration.
+18:27:23,015 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@544d57e - Registering current configuration as safe fallback point
+18:27:23,015 |-INFO in ch.qos.logback.classic.util.ContextInitializer@6b6776cb - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 135 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+
+]]></system-out>
+  </testcase>
+</testsuite>
