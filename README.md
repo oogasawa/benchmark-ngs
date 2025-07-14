@@ -1,1 +1,1 @@
-# benchmark-parabricks
+# benchmark-ngs
