@@ -5,6 +5,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
+import com.github.oogasawa.benchmark.ngs.parabricks.fq2bam.BatchTimeToTsv;
+import com.github.oogasawa.benchmark.ngs.parabricks.fq2bam.Fq2BamThroughput;
 import com.github.oogasawa.utility.cli.CommandRepository;
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.Option;

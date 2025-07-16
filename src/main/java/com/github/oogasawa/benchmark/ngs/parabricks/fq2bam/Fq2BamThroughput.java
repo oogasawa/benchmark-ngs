@@ -1,4 +1,4 @@
-package com.github.oogasawa.benchmark.ngs.parabricks;
+package com.github.oogasawa.benchmark.ngs.parabricks.fq2bam;
 
 import java.io.*;
 import java.nio.file.*;

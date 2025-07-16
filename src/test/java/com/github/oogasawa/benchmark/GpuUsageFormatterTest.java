@@ -2,6 +2,7 @@ package com.github.oogasawa.benchmark;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import com.github.oogasawa.benchmark.cuda.GpuUsageFormatter;
 
 class GpuUsageFormatterTest {
 

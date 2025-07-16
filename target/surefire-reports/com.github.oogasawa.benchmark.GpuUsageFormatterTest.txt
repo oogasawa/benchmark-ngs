@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
 Test set: com.github.oogasawa.benchmark.GpuUsageFormatterTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.225 s - in com.github.oogasawa.benchmark.GpuUsageFormatterTest
-com.github.oogasawa.benchmark.GpuUsageFormatterTest.testNormalizeColumnName  Time elapsed: 0.208 s
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.241 s - in com.github.oogasawa.benchmark.GpuUsageFormatterTest
+com.github.oogasawa.benchmark.GpuUsageFormatterTest.testNormalizeColumnName  Time elapsed: 0.222 s
