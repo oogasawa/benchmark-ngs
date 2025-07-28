@@ -159,13 +159,13 @@ FASTQ2=../Data/sample_2.fq.gz
 bwa mem -t 8 $REF $FASTQ1 $FASTQ2 > aln.sam
 ```
 
-Run `bwa` and start the benchmark monitor like this:
+**Run `bwa` and start the benchmark monitor like this:**
 
 ```bash
 ./benchmark-ngs benchmark:run -i 5 -n series01 -- bash mapping.sh
 ```
 
-This will collect system resource data every 5 seconds. Output files will look like this:
+**This will collect system resource data every 5 seconds. Output files will look like this:**
 
 ```bash
 series01.free.out    series01.iostat.out  series01.pidstat.out
