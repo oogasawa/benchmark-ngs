@@ -6,9 +6,9 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
+import java.util.logging.Logger;
 import java.util.regex.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 /**
  * Parses stderr logs from Parabricks executions and extracts total runtime and status.
@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory;
  */
 public class BatchTimeToTsv {
 
-    private static final Logger logger = LoggerFactory.getLogger(BatchTimeToTsv.class);
+    private static final Logger logger = Logger.getLogger(BatchTimeToTsv.class.getName());
 
     private static final Pattern TIMESTAMP_PATTERN =
         Pattern.compile("\\[PB Info ([\\d]{4}-[A-Za-z]{3}-\\d{2} \\d{2}:\\d{2}:\\d{2})]");

@@ -3,6 +3,8 @@ package com.github.oogasawa.benchmark.ngs.parabricks;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 import com.github.oogasawa.benchmark.ngs.parabricks.fq2bam.BatchTimeToTsv;
@@ -12,13 +14,10 @@ import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 
 public class ParabricksCommands {
 
-    private static final Logger logger = LoggerFactory.getLogger(ParabricksCommands.class);
+    private static final Logger logger = Logger.getLogger(ParabricksCommands.class.getName());
     /**
      * The command repository used to register commands.
      */
@@ -63,14 +62,15 @@ public class ParabricksCommands {
                                      try {
                                          BatchTimeToTsv.parse(regexStr);
                                      } catch (PatternSyntaxException e) {
-                                         logger.error("Invalid regular expression: {}", e.getMessage());
+                                         logger.log(Level.SEVERE, String.format("Invalid regular expression: %s", e.getMessage()));
                                          System.exit(2);
                                      } catch (Throwable t) {
-                                         logger.error("UNRECOVERABLE: Application failed: {}", t.getMessage(), t);
+                                         logger.log(Level.SEVERE, String.format("UNRECOVERABLE: Application failed: %s", t.getMessage()), t);
                                          System.exit(1);
                                      }
                                  });
     }
+
 
 
     
@@ -123,10 +123,10 @@ public class ParabricksCommands {
                                      try {
                                          Fq2BamThroughput.parseAndExport(Paths.get(inputPath), Paths.get(outputPath));
                                      } catch (IOException e) {
-                                         logger.error("I/O error: {}", e.getMessage(), e);
+                                         logger.log(Level.SEVERE, String.format("I/O error: %s", e.getMessage()), e);
                                          System.exit(2);
                                      } catch (Throwable t) {
-                                         logger.error("UNRECOVERABLE: Application failed: {}", t.getMessage(), t);
+                                         logger.log(Level.SEVERE, String.format("UNRECOVERABLE: Application failed: %s", t.getMessage()), t);
                                          System.exit(1);
                                      }
                                  });
@@ -136,5 +136,4 @@ public class ParabricksCommands {
 
 
     
-
 }

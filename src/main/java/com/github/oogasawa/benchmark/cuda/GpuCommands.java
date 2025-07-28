@@ -3,21 +3,21 @@ package com.github.oogasawa.benchmark.cuda;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 import com.github.oogasawa.utility.cli.CommandRepository;
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import tech.tablesaw.api.Table;
 
 
 public class GpuCommands {
 
-    private static final Logger logger = LoggerFactory.getLogger(GpuCommands.class);
+    private static final Logger logger = Logger.getLogger(GpuCommands.class.getName());
+
     /**
      * The command repository used to register commands.
      */
@@ -173,7 +173,7 @@ public class GpuCommands {
                                      GpuUsageChart.draw(gpuUsageTable, outfile, "GPU Utilization");
                                      
                                 } catch (IOException e) {
-                                    logger.error("Can not draw Gpu Usage Chart", e);
+                                    logger.log(Level.SEVERE, "Can not draw Gpu Usage Chart", e);
                                 }                    
                              });
     }
@@ -223,7 +223,7 @@ public class GpuCommands {
                                      GpuUsageChart.draw(gpuUsageTable, outfile, "GPU Memory Utilization");
                                      
                                 } catch (IOException e) {
-                                    logger.error("Can not draw Gpu Usage Chart", e);
+                                    logger.log(Level.SEVERE, "Can not draw Gpu Usage Chart", e);
                                 }                    
                 
                              });

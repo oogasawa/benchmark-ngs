@@ -1,31 +1,24 @@
 package com.github.oogasawa.benchmark.ngs;
 
 
-import java.io.IOException;
-import java.nio.file.Path;
+import java.util.logging.Logger;
+import com.github.oogasawa.benchmark.BenchmarkCommands;
 import com.github.oogasawa.benchmark.cuda.GpuCommands;
 import com.github.oogasawa.benchmark.ngs.parabricks.ParabricksCommands;
 import com.github.oogasawa.utility.cli.CommandRepository;
-
 import org.apache.commons.cli.CommandLine;
-import org.apache.commons.cli.Option;
-import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
-import tech.tablesaw.api.Table;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 
 
 public class App {
 
-    private static final Logger logger = LoggerFactory.getLogger(App.class);
+    private static final Logger logger = Logger.getLogger(App.class.getName());
     
     /**
      * The command-line usage synopsis.
      */
-    String synopsis = "java -jar your_program-<VERSION>-fat.jar <command> <options>";
+    String synopsis = "java -jar benchmark-ngs-<VERSION>.jar <command> <options>";
     
     /**
      * The repository that holds command definitions and executes them.
@@ -70,10 +63,13 @@ public class App {
      */
     public void setupCommands() {
 
-        GpuCommands gpuCommands = new GpuCommands();
+        var benchmarkCommands = new BenchmarkCommands();
+        benchmarkCommands.setupCommands(this.cmds);
+        
+        var gpuCommands = new GpuCommands();
         gpuCommands.setupCommands(this.cmds);
 
-        ParabricksCommands parabricksCommands = new ParabricksCommands();
+        var parabricksCommands = new ParabricksCommands();
         parabricksCommands.setupCommands(this.cmds); 
     }
 

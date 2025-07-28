@@ -3,15 +3,14 @@ package com.github.oogasawa.benchmark.cuda;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.time.format.DateTimeFormatter;
-
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import tech.tablesaw.aggregate.AggregateFunctions;
 import tech.tablesaw.api.StringColumn;
 import tech.tablesaw.api.Table;
 import tech.tablesaw.io.csv.CsvReadOptions;
 import tech.tablesaw.io.csv.CsvWriteOptions;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * A utility class to convert a Parabricks-style `nvidia-smi` GPU usage log into a wide-format CSV
@@ -32,7 +31,7 @@ import org.slf4j.LoggerFactory;
  */
 public class GpuUsageFormatter {
 
-    private static final Logger logger = LoggerFactory.getLogger(GpuUsageFormatter.class);
+    private static final Logger logger = Logger.getLogger(GpuUsageFormatter.class.getName());
 
 
     /**
@@ -79,7 +78,7 @@ public class GpuUsageFormatter {
             result.write().csv(outfile.toFile());
             return result;
         } catch (IOException e) {
-            logger.error("Failed to read or write GPU usage log: " + nvidiaSmiLog, e);
+            logger.log(Level.SEVERE, "Failed to read or write GPU usage log: " + nvidiaSmiLog, e);
             //e.printStackTrace();
             return null;
         }
@@ -129,7 +128,7 @@ public class GpuUsageFormatter {
             result.write().csv(outfile.toFile());
             return result;
         } catch (IOException e) {
-            logger.error("Failed to read or write GPU memory usage log: " + nvidiaSmiLog, e);
+            logger.log(Level.SEVERE, "Failed to read or write GPU memory usage log: " + nvidiaSmiLog, e);
             //e.printStackTrace();
             return null;
         }
@@ -211,12 +210,12 @@ public class GpuUsageFormatter {
 
 
 
-        logger.info("Normalized columns from file {}: {}", nvidiaSmiLog, df.columnNames());
+        logger.info(String.format("Normalized columns from file %s: %s", nvidiaSmiLog, df.columnNames()));
 
         // Check for target metric column
         if (!df.columnNames().contains(metricColumn)) {
-            logger.error("Column '{}' not found in table: {}", metricColumn, df.name());
-            logger.warn("Available columns are: {}", df.columnNames());
+            logger.severe(String.format("Column '%s' not found in table: %s", metricColumn, df.name()));
+            logger.warning(String.format("Available columns are: %s", df.columnNames()));
             throw new IllegalStateException("Column '" + metricColumn + "' not found in table: " + df.name());
         }
 
@@ -232,7 +231,7 @@ public class GpuUsageFormatter {
 
         // Select relevant columns
         Table reduced = df.selectColumns("timestamp_clean", "index", metricColumn);
-        logger.debug("Reduced table preview:\n{}", reduced.first(5).print());
+        logger.fine(String.format("Reduced table preview:\n%s", reduced.first(5).print()));
 
         // Create GPU label column
         StringColumn gpuCol = reduced.intColumn("index")
